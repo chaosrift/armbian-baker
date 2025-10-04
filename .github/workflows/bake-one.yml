@@ -81,7 +81,7 @@ jobs:
 
     steps:
       - name: Get more disk space
-        uses: jlumbroso/free-disk-space@main
+        uses: diverger/free-disk-space@diverger
         with:
           tool-cache: false
           android: true
