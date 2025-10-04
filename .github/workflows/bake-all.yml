@@ -6,7 +6,6 @@ run-name: >
   }})
 
 on:
-
   repository_dispatch:
     types: [event-bake-all]
 
