@@ -2272,7 +2272,7 @@ jobs:
 
       # Download the artifacts (output/info) produced by the prepare-matrix job.
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           name: build-info-json
           path: output/info
@@ -2370,7 +2370,7 @@ jobs:
           echo "Baker: ${{ github.sha }}" >> release.txt
 
       - name: Download all OSS URL artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           pattern: oss-urls-*
           merge-multiple: true
