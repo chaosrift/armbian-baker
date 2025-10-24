@@ -176,7 +176,7 @@ jobs:
           echo "$_EFFECTIVE_ARMBIAN_VERSION" > downloads/version
 
       - name: 'Upload Artifact'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: assets-for-download-${{ env.NIGHTLY_BUILD == 'yes' && 'nightly' || 'stable' }}
           path: downloads
@@ -442,7 +442,7 @@ jobs:
           echo "Logs: ${{ steps.prepare-matrix.outputs.logs_url }}"
 
       # Store output/info folder in a GitHub Actions artifact
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         name: Upload output/info as GitHub Artifact
         with:
           name: build-info-json
@@ -1298,7 +1298,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I1"
           path: "oss-urls/image-urls-I1.txt"
@@ -1358,7 +1358,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I2"
           path: "oss-urls/image-urls-I2.txt"
@@ -1418,7 +1418,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I3"
           path: "oss-urls/image-urls-I3.txt"
@@ -1478,7 +1478,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I4"
           path: "oss-urls/image-urls-I4.txt"
@@ -1538,7 +1538,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I5"
           path: "oss-urls/image-urls-I5.txt"
@@ -1598,7 +1598,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I6"
           path: "oss-urls/image-urls-I6.txt"
@@ -1658,7 +1658,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I7"
           path: "oss-urls/image-urls-I7.txt"
@@ -1718,7 +1718,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I8"
           path: "oss-urls/image-urls-I8.txt"
@@ -1778,7 +1778,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I9"
           path: "oss-urls/image-urls-I9.txt"
@@ -1838,7 +1838,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I10"
           path: "oss-urls/image-urls-I10.txt"
@@ -1898,7 +1898,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I11"
           path: "oss-urls/image-urls-I11.txt"
@@ -1958,7 +1958,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I12"
           path: "oss-urls/image-urls-I12.txt"
@@ -2018,7 +2018,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I13"
           path: "oss-urls/image-urls-I13.txt"
@@ -2078,7 +2078,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I14"
           path: "oss-urls/image-urls-I14.txt"
@@ -2138,7 +2138,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I15"
           path: "oss-urls/image-urls-I15.txt"
@@ -2198,7 +2198,7 @@ jobs:
 
       - name: Upload OSS URL
         if: ${{ always() && steps.build-one-image.outputs.oss_url }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: "oss-urls-I16"
           path: "oss-urls/image-urls-I16.txt"
