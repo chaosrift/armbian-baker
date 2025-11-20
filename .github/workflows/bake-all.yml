@@ -135,7 +135,7 @@ jobs:
     steps:
 
       # - name: "Checkout userpatches repo: ${{env.USERPATCHES_REPOSITORY}}#${{env.USERPATCHES_REF}}"
-      #   uses: actions/checkout@v5
+      #   uses: actions/checkout@v6
       #   if: ${{ ( env.USERPATCHES_REPOSITORY != '' ) && ( env.USERPATCHES_REF != '' ) }}
       #   with:
       #     token: ${{ env.GH_TOKEN }}
@@ -146,7 +146,7 @@ jobs:
 
       - name: Checkout custom repo
         if: ${{ ( env.CUSTOM_REP != '' ) && ( env.CUSTOM_REF != '' ) }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.CUSTOM_REP }}
           token: ${{ env.GH_TOKEN }}
@@ -229,7 +229,7 @@ jobs:
 
       # clean runners, self-hosted, or GitHub's
       - name: Checkout build repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.BUILD_REPOSITORY }}
           ref: ${{ env.BUILD_REF }}
@@ -246,7 +246,7 @@ jobs:
           cd ..
 
       - name: "Checkout userpatches repo: ${{env.USERPATCHES_REPOSITORY}}#${{env.USERPATCHES_REF}}"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ env.GH_TOKEN }}
           repository: ${{ env.USERPATCHES_REPOSITORY }}
@@ -264,7 +264,7 @@ jobs:
 
       - name: Checkout custom repo
         if: ${{ ( env.CUSTOM_REP != '' ) && ( env.CUSTOM_REF != '' ) }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.CUSTOM_REP }}
           token: ${{ env.GH_TOKEN }}
@@ -288,7 +288,7 @@ jobs:
 
       - name: Checkout patched oras-py
         if: false
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: 'oras-project/oras-py'
           ref: '0.2.33'
@@ -675,7 +675,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -709,7 +709,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -743,7 +743,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -777,7 +777,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -811,7 +811,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -845,7 +845,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -879,7 +879,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -913,7 +913,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -947,7 +947,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -981,7 +981,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1015,7 +1015,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1049,7 +1049,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1083,7 +1083,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1117,7 +1117,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1151,7 +1151,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1185,7 +1185,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1219,7 +1219,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1254,7 +1254,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1314,7 +1314,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1374,7 +1374,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1434,7 +1434,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1494,7 +1494,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1554,7 +1554,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1614,7 +1614,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1674,7 +1674,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1734,7 +1734,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1794,7 +1794,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1854,7 +1854,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1914,7 +1914,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -1974,7 +1974,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -2034,7 +2034,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -2094,7 +2094,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -2154,7 +2154,7 @@ jobs:
     runs-on: ${{ matrix.runs_on }}
     steps:
       - name: Checkout workflow repo (for local actions)
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ github.repository }}
           ref: ${{ github.sha }}
@@ -2236,7 +2236,7 @@ jobs:
         run: rm -rf userpatches.repo
 
       - name: Checkout build repo
-        uses: actions/checkout@v5 # We don't need to clone git, really. A wget would suffice for GH-hosted runners. But using clone is better for Igor-hosted runners.
+        uses: actions/checkout@v6 # We don't need to clone git, really. A wget would suffice for GH-hosted runners. But using clone is better for Igor-hosted runners.
         with:
           repository: ${{ env.BUILD_REPOSITORY }}
           ref: ${{ needs.matrix_prep.outputs.armbian_build_sha1 }}
@@ -2246,7 +2246,7 @@ jobs:
 
       # clone the userpatches repo (`armbian/os`)
       - name: "Checkout userpatches repo: ${{env.USERPATCHES_REPOSITORY}}#${{env.USERPATCHES_REF}}"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: ${{ ( env.USERPATCHES_REPOSITORY != '' ) && ( env.USERPATCHES_REF != '' ) }}
         with:
           token: ${{ env.GH_TOKEN }}

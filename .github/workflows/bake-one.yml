@@ -91,7 +91,7 @@ jobs:
           swap-storage: false
 
       # - name: Checkout board definitions
-      #   uses: actions/checkout@v5
+      #   uses: actions/checkout@v6
       #   with:
       #     repository: diverger/armbian-board
       #     token: ${{ secrets.GH_ACCESS_TOKEN }}
@@ -102,7 +102,7 @@ jobs:
       #   run: ls -l
 
       - name: Checkout Armbian build framework locally
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.BUILD_REPO_OWNER }}/${{ env.BUILD_REPO_NAME }}
           token: ${{ secrets.GH_ACCESS_TOKEN }}
