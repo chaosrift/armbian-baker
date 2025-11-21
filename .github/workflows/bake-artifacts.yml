@@ -72,7 +72,7 @@ jobs:
 
       # Checkout the repository
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           token: ${{ env.GH_TOKEN }}
           repository: ${{ env.BUILD_REPOSITORY }}
@@ -81,7 +81,7 @@ jobs:
           clean: false
 
       - name: "Checkout userpatches repo: ${{env.USERPATCHES_REPOSITORY}}#${{env.USERPATCHES_REF}}"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         if: ${{ ( env.USERPATCHES_REPOSITORY != '' ) && ( env.USERPATCHES_REF != '' ) }}
         with:
           token: ${{ env.GH_TOKEN }}
@@ -93,7 +93,7 @@ jobs:
 
       - name: "Checkout customizations"
         if: ${{ ( env.CUSTOM_REP != '' ) && ( env.CUSTOM_REF != '' ) }}
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: ${{ env.CUSTOM_REP }}
           token: ${{ env.GH_TOKEN }}
