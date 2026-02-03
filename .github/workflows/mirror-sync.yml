@@ -7,8 +7,8 @@ on:
     branches: ['**']
   create:
     branches: ['**']
-  schedule:
-    - cron: '0 */4 * * *'  # Every 4 hours
+  release:
+    types: [published, edited]
   workflow_dispatch:
     inputs:
       sync_type:
@@ -24,16 +24,25 @@ on:
 env:
   MIRROR_REPO: ${{ secrets.MIRROR_REPO }}  # Format: username/repo-name
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   sync-repository:
-    if: ${{ github.repository_owner == 'diverger' }}
+    permissions:
+      contents: write
+
+    if: ${{ github.actor == 'diverger' && github.repository_owner == 'diverger' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_ACCESS_TOKEN }}
+          # we explicitly save the token to local to facilitate the following git operations
+          persist-credentials: true
 
       - name: Configure Git
         run: |
@@ -106,7 +115,7 @@ jobs:
   sync-releases:
     runs-on: ubuntu-latest
     needs: sync-repository
-    if: ${{ github.event.inputs.sync_type == 'full' || github.event.inputs.sync_type == '' }}
+    if: ${{ github.event_name == 'release' || github.event.inputs.sync_type == 'full' || github.event.inputs.sync_type == '' }}
     steps:
       - name: Sync GitHub Releases
         uses: actions/github-script@v8
