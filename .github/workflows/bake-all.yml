@@ -2302,7 +2302,7 @@ jobs:
         timeout-minutes: 60
         if: ${{ (github.event.inputs.skip_images || 'no') == 'no' }}
         id: upload_to_oss
-        uses: diverger/gh-oss-helper@v1
+        uses: diverger/gh-oss-helper@v2
         env:
           ACTIONS_STEP_DEBUG: true
         with:
